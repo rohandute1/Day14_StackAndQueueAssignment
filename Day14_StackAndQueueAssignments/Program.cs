@@ -13,7 +13,7 @@ namespace Day14_StackAndQueueAssignments
             Console.WriteLine("Welcome to Stack and Queue assignments");
 
             Console.WriteLine("Choose any option from given below:-");
-            Console.WriteLine(" 1.Create Stack\n 2.Ability to peak and pop from the stack");
+            Console.WriteLine(" 1.Create Stack\n 2.Ability to peak and pop from the stack\n 3.Create Queue");
             int option = Convert.ToInt32(Console.ReadLine());
             
             switch (option)
@@ -51,6 +51,19 @@ namespace Day14_StackAndQueueAssignments
                         Console.WriteLine("Popped element: " + poppedElement);
                     }
                     break;
+
+                case 3:
+                    LinkedList<int> queue = new LinkedList<int>();
+                    QueueClass queueClass = new QueueClass();
+
+                    QueueClass.Enqueue(queue, 56);
+                    QueueClass.Enqueue(queue, 30);
+                    QueueClass.Enqueue(queue, 70);
+
+                    Console.WriteLine("Queue elements:");
+                    queueClass.PrintQueue(queue);
+                    break;
+            
             }
             Console.ReadLine();
         }
